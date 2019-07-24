@@ -1,0 +1,12 @@
+{
+  "newoApp3App": {
+    "EstadoReservad": {
+      "null": "",
+      "Disponible": "Disponible",
+      "Reservado": "Reservado",
+      "Ocupado": "Ocupado",
+      "Extendido": "Extendido",
+      "Cerrado": "Cerrado"
+    }
+  }
+}

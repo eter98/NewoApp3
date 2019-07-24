@@ -1,0 +1,25 @@
+{
+  "newoApp3App": {
+    "chatsListado": {
+      "home": {
+        "title": "Chats Listados",
+        "createLabel": "Crear nuevo Chats Listado",
+        "createOrEditLabel": "Crear o editar Chats Listado",
+        "search": "Search for Chats Listado",
+        "notFound": "No Chats Listado found"
+      },
+      "created": "Un nuevo Chats Listado ha sido creado con el identificador {{ param }}",
+      "updated": "Un Chats Listado ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Chats Listado ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Chats Listado {{ id }}?"
+      },
+      "detail": {
+        "title": "Chats Listado"
+      },
+      "propietario": "Propietario",
+      "destinatario": "Destinatario",
+      "chat": "Chat"
+    }
+  }
+}

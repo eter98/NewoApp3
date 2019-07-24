@@ -1,0 +1,39 @@
+{
+  "newoApp3App": {
+    "blog": {
+      "home": {
+        "title": "Blogs",
+        "createLabel": "Crear nuevo Blog",
+        "createOrEditLabel": "Crear o editar Blog",
+        "search": "Search for Blog",
+        "notFound": "No Blog found"
+      },
+      "created": "Un nuevo Blog ha sido creado con el identificador {{ param }}",
+      "updated": "Un Blog ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Blog ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Blog {{ id }}?"
+      },
+      "detail": {
+        "title": "Blog"
+      },
+      "titulo": "Titulo",
+      "descripcion": "Descripcion",
+      "tipoContenido": "Tipo Contenido",
+      "contenido": "Contenido",
+      "fecha": "Fecha",
+      "audio": "Audio",
+      "video": "Video",
+      "imagen1": "Imagen 1",
+      "imagen2": "Imagen 2",
+      "banner": "Banner",
+      "estadoPublicacion": "Estado Publicacion",
+      "tipoConsumo": "Tipo Consumo",
+      "valor": "Valor",
+      "impuesto": "Impuesto",
+      "categoriaBlog": "Categoria Blog",
+      "grupos": "Grupos",
+      "miembro": "Miembro"
+    }
+  }
+}

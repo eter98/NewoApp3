@@ -1,0 +1,28 @@
+{
+  "newoApp3App": {
+    "chat": {
+      "home": {
+        "title": "Chats",
+        "createLabel": "Criar novo Chat",
+        "createOrEditLabel": "Criar ou editar Chat",
+        "search": "Pesquisar por Chat",
+        "notFound": "Nenhum Chat encontrado"
+      },
+      "created": "Um novo Chat foi criado com o identificador {{ param }}",
+      "updated": "Um Chat foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Chat foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Chat {{ id }}?"
+      },
+      "detail": {
+        "title": "Chat"
+      },
+      "mensaje": "Mensaje",
+      "fecha": "Fecha",
+      "leido": "Leido",
+      "chatsListado": "Chats Listado",
+      "de": "De",
+      "para": "Para"
+    }
+  }
+}
