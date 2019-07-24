@@ -1,0 +1,49 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="chat">
+            <h2><span jhiTranslate="newoApp3App.chat.detail.title">Chat</span> {{chat.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="newoApp3App.chat.mensaje">Mensaje</span></dt>
+                <dd>
+                    <span>{{chat.mensaje}}</span>
+                </dd>
+                <dt><span jhiTranslate="newoApp3App.chat.fecha">Fecha</span></dt>
+                <dd>
+                    <span>{{chat.fecha}}</span>
+                </dd>
+                <dt><span jhiTranslate="newoApp3App.chat.leido">Leido</span></dt>
+                <dd>
+                    <span>{{chat.leido}}</span>
+                </dd>
+                <dt><span jhiTranslate="newoApp3App.chat.chatsListado">Chats Listado</span></dt>
+                <dd>
+                    <div *ngIf="chat.chatsListado">
+                        <a [routerLink]="['/chats-listado', chat.chatsListado?.id, 'view']">{{chat.chatsListado?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="newoApp3App.chat.de">De</span></dt>
+                <dd>
+                    {{chat.de?.login}}
+                </dd>
+                <dt><span jhiTranslate="newoApp3App.chat.para">Para</span></dt>
+                <dd>
+                    {{chat.para?.login}}
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/chat', chat.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

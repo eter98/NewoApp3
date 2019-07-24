@@ -1,0 +1,23 @@
+{
+    "name": "MiembrosGrupo",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "user",
+            "otherEntityRelationshipName": "miembrosGrupo",
+            "relationshipName": "miembro",
+            "otherEntityField": "login"
+        }
+    ],
+    "changelogDate": "20190724142706",
+    "entityTableName": "miembros_grupo",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "searchEngine": "elasticsearch"
+}

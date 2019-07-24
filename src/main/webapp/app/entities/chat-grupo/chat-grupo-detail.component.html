@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="chatGrupo">
+            <h2><span jhiTranslate="newoApp3App.chatGrupo.detail.title">Chat Grupo</span> {{chatGrupo.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="newoApp3App.chatGrupo.mensaje">Mensaje</span></dt>
+                <dd>
+                    <span>{{chatGrupo.mensaje}}</span>
+                </dd>
+                <dt><span jhiTranslate="newoApp3App.chatGrupo.fecha">Fecha</span></dt>
+                <dd>
+                    <span>{{chatGrupo.fecha}}</span>
+                </dd>
+                <dt><span jhiTranslate="newoApp3App.chatGrupo.leido">Leido</span></dt>
+                <dd>
+                    <span>{{chatGrupo.leido}}</span>
+                </dd>
+                <dt><span jhiTranslate="newoApp3App.chatGrupo.de">De</span></dt>
+                <dd>
+                    {{chatGrupo.de?.login}}
+                </dd>
+                <dt><span jhiTranslate="newoApp3App.chatGrupo.para">Para</span></dt>
+                <dd>
+                    {{chatGrupo.para?.login}}
+                </dd>
+                <dt><span jhiTranslate="newoApp3App.chatGrupo.chatListGrupo">Chat List Grupo</span></dt>
+                <dd>
+                    <div *ngIf="chatGrupo.chatListGrupo">
+                        <a [routerLink]="['/chat-list-grupo', chatGrupo.chatListGrupo?.id, 'view']">{{chatGrupo.chatListGrupo?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="newoApp3App.chatGrupo.grupo">Grupo</span></dt>
+                <dd>
+                    <div *ngIf="chatGrupo.grupo">
+                        <a [routerLink]="['/grupos', chatGrupo.grupo?.id, 'view']">{{chatGrupo.grupo?.nombreGrupo}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/chat-grupo', chatGrupo.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

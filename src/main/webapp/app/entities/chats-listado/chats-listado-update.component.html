@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-chats-listado-heading" jhiTranslate="newoApp3App.chatsListado.home.createOrEditLabel">Create or edit a Chats Listado</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="newoApp3App.chatsListado.propietario" for="field_propietario">Propietario</label>
+                    <select class="form-control" id="field_propietario" name="propietario" formControlName="propietario">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="userOption.id === editForm.get('propietario').value?.id ? editForm.get('propietario').value : userOption" *ngFor="let userOption of users; trackBy: trackUserById">{{userOption.login}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="newoApp3App.chatsListado.destinatario" for="field_destinatario">Destinatario</label>
+                    <select class="form-control" id="field_destinatario" name="destinatario" formControlName="destinatario">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="userOption.id === editForm.get('destinatario').value?.id ? editForm.get('destinatario').value : userOption" *ngFor="let userOption of users; trackBy: trackUserById">{{userOption.login}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

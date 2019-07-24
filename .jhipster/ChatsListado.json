@@ -1,0 +1,36 @@
+{
+    "name": "ChatsListado",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "user",
+            "otherEntityRelationshipName": "chatsListado",
+            "relationshipName": "propietario",
+            "otherEntityField": "login"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "user",
+            "otherEntityRelationshipName": "chatsListado",
+            "relationshipName": "destinatario",
+            "otherEntityField": "login"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "chat",
+            "otherEntityRelationshipName": "chatsListado",
+            "relationshipName": "chat"
+        }
+    ],
+    "changelogDate": "20190724142701",
+    "entityTableName": "chats_listado",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "searchEngine": "elasticsearch"
+}

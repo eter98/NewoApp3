@@ -1,0 +1,36 @@
+{
+    "name": "ChatListGrupo",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "user",
+            "otherEntityRelationshipName": "chatListGrupo",
+            "relationshipName": "propietario",
+            "otherEntityField": "login"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "user",
+            "otherEntityRelationshipName": "chatListGrupo",
+            "relationshipName": "destinatario",
+            "otherEntityField": "login"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "chatGrupo",
+            "otherEntityRelationshipName": "chatListGrupo",
+            "relationshipName": "chatGrupo"
+        }
+    ],
+    "changelogDate": "20190724142702",
+    "entityTableName": "chat_list_grupo",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "searchEngine": "elasticsearch"
+}

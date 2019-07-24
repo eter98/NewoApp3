@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="facturacion">
+            <h2><span jhiTranslate="newoApp3App.facturacion.detail.title">Facturacion</span> {{facturacion.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="newoApp3App.facturacion.titularFactura">Titular Factura</span></dt>
+                <dd>
+                    <span>{{facturacion.titularFactura}}</span>
+                </dd>
+                <dt><span jhiTranslate="newoApp3App.facturacion.tipoPersona">Tipo Persona</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'newoApp3App.TipoPersonad.' + facturacion.tipoPersona}}">{{facturacion.tipoPersona}}</span>
+                </dd>
+                <dt><span jhiTranslate="newoApp3App.facturacion.periodicidadFacturacion">Periodicidad Facturacion</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'newoApp3App.PeriodicidadFacturaciond.' + facturacion.periodicidadFacturacion}}">{{facturacion.periodicidadFacturacion}}</span>
+                </dd>
+                <dt><span jhiTranslate="newoApp3App.facturacion.maximoMonto">Maximo Monto</span></dt>
+                <dd>
+                    <span>{{facturacion.maximoMonto}}</span>
+                </dd>
+                <dt><span jhiTranslate="newoApp3App.facturacion.empresa">Empresa</span></dt>
+                <dd>
+                    <div *ngIf="facturacion.empresa">
+                        <a [routerLink]="['/empresa', facturacion.empresa?.id, 'view']">{{facturacion.empresa?.razonSocial}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="newoApp3App.facturacion.cuentaAsociada">Cuenta Asociada</span></dt>
+                <dd>
+                    <div *ngIf="facturacion.cuentaAsociada">
+                        <a [routerLink]="['/cuenta-asociada', facturacion.cuentaAsociada?.id, 'view']">{{facturacion.cuentaAsociada?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/facturacion', facturacion.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

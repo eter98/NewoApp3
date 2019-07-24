@@ -1,0 +1,31 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="chatsListado">
+            <h2><span jhiTranslate="newoApp3App.chatsListado.detail.title">Chats Listado</span> {{chatsListado.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="newoApp3App.chatsListado.propietario">Propietario</span></dt>
+                <dd>
+                    {{chatsListado.propietario?.login}}
+                </dd>
+                <dt><span jhiTranslate="newoApp3App.chatsListado.destinatario">Destinatario</span></dt>
+                <dd>
+                    {{chatsListado.destinatario?.login}}
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/chats-listado', chatsListado.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

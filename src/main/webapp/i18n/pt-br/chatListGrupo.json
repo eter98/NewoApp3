@@ -1,0 +1,25 @@
+{
+  "newoApp3App": {
+    "chatListGrupo": {
+      "home": {
+        "title": "Chat List Grupos",
+        "createLabel": "Criar novo Chat List Grupo",
+        "createOrEditLabel": "Criar ou editar Chat List Grupo",
+        "search": "Pesquisar por Chat List Grupo",
+        "notFound": "Nenhum Chat List Grupo encontrado"
+      },
+      "created": "Um novo Chat List Grupo foi criado com o identificador {{ param }}",
+      "updated": "Um Chat List Grupo foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Chat List Grupo foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Chat List Grupo {{ id }}?"
+      },
+      "detail": {
+        "title": "Chat List Grupo"
+      },
+      "propietario": "Propietario",
+      "destinatario": "Destinatario",
+      "chatGrupo": "Chat Grupo"
+    }
+  }
+}

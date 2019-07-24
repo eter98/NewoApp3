@@ -1,0 +1,10 @@
+{
+  "newoApp3App": {
+    "TipoIngresod": {
+      "null": "",
+      "Espacio_Libre": "Espacio_Libre",
+      "Reserva": "Reserva",
+      "Oficina": "Oficina"
+    }
+  }
+}
